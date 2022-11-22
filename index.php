@@ -14,24 +14,13 @@ curl_close($curl);
 
 <script src="axe.min.js"></script>
 <script>
-function escapeHtml(unsafe)
-{
-    return unsafe
-         .replace(/&/g, "&amp;")
-         .replace(/</g, "&lt;")
-         .replace(/>/g, "&gt;")
-         .replace(/"/g, "&quot;")
-         .replace(/'/g, "&#039;");
- }
-
-
 axe.run(document, function (err, results) {
     if (err) throw err;
     document.querySelector('html').remove();
-
+    const violations = JSON.stringify(results.violations);
+    const violations_escaped = violations.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#039;');
     document.open ();
-    document.write(JSON.stringify(escapeHtml(results)));
+    document.write('<pre>'+violations_escaped+'</pre>');
     document.close ();
-    // console.log(results);
 });
 </script>
