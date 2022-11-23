@@ -2,7 +2,7 @@
  * Module dependencies.
  */
 
-var express = require('express', 'axe-core');
+var express = require('express');
 
 var app = module.exports = express();
 
@@ -14,7 +14,6 @@ app.get('/', function(req, res){
     );
   });
   
-
 // create an error with .status. we
 // can then use the property in our
 // custom error handler (Connect respects this prop as well)
@@ -91,8 +90,30 @@ app.use(function(req, res){
   res.send({ error: "Sorry, can't find that" })
 });
 
+
+// trying axios
+const axios = require('axios');
+
+// Make a request for a user with a given ID
+axios.get('https://example.com')
+  .then(function (response) {
+
+    // handle success
+    const axe = require('axe-core');
+    console.log(response.data);
+    
+  })
+  .catch(function (error) {
+    // handle error
+    console.log('error'+error);
+  })
+  .then(function () {
+    // always executed
+  });
+
 /* istanbul ignore next */
 if (!module.parent) {
     app.listen(3000);
     console.log('Express started on port 3000');
 }  
+
