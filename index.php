@@ -4,7 +4,7 @@ ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_report
 
 // Axe Web Service
 $url = $_GET['url'];
-exec('axe --chrome-options="no-sandbox" --stdout '.$url, $output, $retval);
+exec('axe --chromedriver-path /usr/bin/chromedriver --chrome-options="no-sandbox" --stdout '.$url, $output, $retval);
 foreach($output as $item){
   print_r(htmlspecialchars($item));
 }
