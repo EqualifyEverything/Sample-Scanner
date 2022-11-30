@@ -4,7 +4,7 @@ This simple web service will run the axe-core cli, so you can view WCAG 2.1 comp
 ## Requirements
 You must have [axe-core cli](https://www.npmjs.com/package/@axe-core/cli) and its dependencies running on your web server. PHP 7+ must also be installed.
 
-## Steps on Linux
+## Setup on Linux
 After you setup a LEMP web server..
 1. [Install node and npm](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04).
 2. [Install Selenium and dependencies](https://towardsdatascience.com/how-to-setup-selenium-on-a-linux-vm-cd19ee47d922) - note: when installing chromdriver, you'll need to install the [latest version](https://chromedriver.chromium.org/downloads)
