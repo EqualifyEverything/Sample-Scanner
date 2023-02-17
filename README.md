@@ -1,4 +1,4 @@
-# Axe Web Service for Equalify
+# Scanning Web Service for Equalify
 This simple web service will run the axe-core cli, so you can view WCAG 2.1 compliance errors.
 
 ## Requirements
