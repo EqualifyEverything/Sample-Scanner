@@ -1,5 +1,5 @@
-# Scanning Web Service for Equalify
-This simple web service will scan of a given URL, outputting compliance errors.
+# Automated Scan Service
+This simple web service will scan of a given URL, outputting web accessibility related notices.
 
 ## Requirements
 You must have [axe-core cli](https://www.npmjs.com/package/@axe-core/cli) and its dependencies running on your web server. PHP 7+ must also be installed.
